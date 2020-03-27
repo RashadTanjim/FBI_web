@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# static file directory declare
+STATICFILES_DIRS = [
+    "../static"
+]
+
 
 # Application definition
 
@@ -55,7 +60,7 @@ ROOT_URLCONF = 'fbi.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['../templates/pages'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
