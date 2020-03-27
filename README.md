@@ -12,7 +12,15 @@ cd fbi
 
 # Serve on localhost:8000
 python manage.py runserver
+
+# Admin info
+username: admin
+Password: 1230
+
 ```
+
+
+
 
 
 
