@@ -29,8 +29,17 @@ ALLOWED_HOSTS = []
 
 # static file directory declare
 STATICFILES_DIRS = [
-    "../static"
+   os.path.join(BASE_DIR, '../static')
 ]
+
+STATIC_URL = '/static/'
+
+
+# media file directory declare
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL = '/media/'
+
 
 
 # Application definition
@@ -43,6 +52,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    
 ]
 
 MIDDLEWARE = [
@@ -60,7 +71,7 @@ ROOT_URLCONF = 'fbi.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['../templates/pages'],
+        'DIRS': ['../templates/pages'], 
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,4 +134,3 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'

@@ -1,0 +1,135 @@
+{% block content %}
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>FBI- File Upload</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %} " rel="stylesheet">
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %} " rel="stylesheet">
+  <link href="{% static 'assets/vendor/font-awesome/css/font-awesome.min.css' %} " rel="stylesheet">
+  <link href="{% static 'assets/vendor/ionicons/css/ionicons.min.css' %} " rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %} " rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %} " rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %} " rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Rapid - v2.0.0
+  * Template URL: https://bootstrapmade.com/rapid-multipurpose-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== 
+  <a href="{{ url }}">{{ url }}</a>-->
+</head>
+
+<body>
+
+ 
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="section-bg">
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-3">
+
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="form">
+
+              <h2>Upload File (JPG, PNG)</h2>
+              <p>Eos ipsa est voluptates. Nostrum nam libero ipsa vero. Debitis quasi sit eaque numquam similique commodi harum aut temporibus.</p>
+
+
+              <form method="post" enctype="multipart/form-data" role="form" class="form">
+                {% csrf_token %}
+                <input type="file" name="document">
+                <br>
+                <br>
+                <div class="text-center"><button type="submit" title="Upload file">Upload file</button></div>
+              </form>
+              {% if url %}
+                <br>
+                <br>
+                <h2>File uploaded successfully! </h2> <!--- <a href="{{ url }}">{{ url }}</a>-->
+              {% endif %}
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-3">
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+      <div class="copyright">
+        &copy; Copyright <strong>FBI App</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+       
+        Designed by <a href="https://fbiprojects.info/">FBI Project Team Members</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/mobile-nav/mobile-nav.js' %}"></script>
+  <script src="{% static 'assets/vendor/wow/wow.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js'%}"></script>
+
+</body>
+
+</html>
+
+{% endblock %}
+
+
+
